@@ -1,8 +1,8 @@
 const Category = require('../../models/Category');
-const { pascalize } = require('../../utils/string-operations');
+const { capitalize } = require('../../utils/string-operations');
 
 const defaultRenderObject = {
-    pascalize,
+    capitalize,
     pageTitle: 'categories',
     wasAdded: false,
     isEditing: false,
@@ -61,5 +61,5 @@ exports.getDeleteCategory = takeAction('isDeleting');
 exports.getAddedCategory = actionTaken('wasAdded');
 exports.getEditedCategory = actionTaken('wasEdited');
 exports.getDeletedCategory = actionTaken('wasDeleted');
-exports.getDuplicteCategory = actionTaken('duplicateName');
+exports.getDuplicateCategory = actionTaken('duplicateName');
 exports.getNoFields = actionTaken('noFields');

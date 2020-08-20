@@ -24,7 +24,7 @@ app.set('view engine', 'pug');
 
 // use express middleware
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(path.join(__dirname, 'public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // use route
 app.use(categoryRoutes);

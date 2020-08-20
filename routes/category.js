@@ -6,7 +6,7 @@ const {
     getEditCategory,
     getEditedCategory,
     getDeleteCategory,
-    getDeletedCatgory,
+    getDeletedCategory,
     getDuplicateCategory,
     getNoFields,
 } = require('../controllers/category/get');
@@ -34,7 +34,7 @@ router.get('/category/edited', getEditedCategory);
 
 // delete requests
 router.get('/category/delete', getDeleteCategory);
-router.get('/category/deleted', getDeletedCatgory);
+router.get('/category/deleted', getDeletedCategory);
 
 // error requests
 router.get('/category/duplicate', getDuplicateCategory);
@@ -42,7 +42,7 @@ router.get('/category/no-fields', getNoFields);
 
 // POST requests
 router.post('/category/add', postAddCategory);
-router.post('/category/edit/:id', postEditCategory);
+// router.post('/category/edit/:id', postEditCategory);
 router.post('/category/delete/:id', postDeleteCategory);
 
 // export router
